@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorTapss" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="830" translatesAutoresizingMaskIntoConstraints="NO" id="li0-at-MIS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BuTaps" translatesAutoresizingMaskIntoConstraints="NO" id="YTR-8W-jrb">
+                                <rect key="frame" x="108" y="28" width="384" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="wFX-GR-5ah"/>
+                                    <constraint firstAttribute="width" constant="384" id="wtC-Wy-tHJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUf-hQ-8xW">
+                                <rect key="frame" x="204" y="343" width="192" height="57"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="3x6-y8-tmr"/>
+                                    <constraint firstAttribute="width" constant="192" id="BXl-Jv-EDd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="22"/>
+                                <color key="tintColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nw6-bv-CsN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many Taps ?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qMk-LX-0la">
+                                <rect key="frame" x="204" y="275" width="192" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KGd-hH-jhX"/>
+                                    <constraint firstAttribute="width" constant="192" id="NDF-sH-nB9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="77 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js8-VI-KOe">
+                                <rect key="frame" x="188" y="256" width="224" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="PNG-ZT-Doo"/>
+                                    <constraint firstAttribute="height" constant="88" id="XrS-dL-DSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uaz-Y6-8wC">
+                                <rect key="frame" x="206" y="94" width="188" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="Ha7-gu-2BH"/>
+                                    <constraint firstAttribute="height" constant="160" id="Tvr-6W-5ES"/>
+                                </constraints>
+                                <state key="normal" image="blueButton"/>
+                                <connections>
+                                    <action selector="onCoinTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNv-Ol-s8J"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="js8-VI-KOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0hu-bM-sW9"/>
+                            <constraint firstItem="fUf-hQ-8xW" firstAttribute="top" secondItem="qMk-LX-0la" secondAttribute="bottom" constant="18" id="HZf-Qu-WZQ"/>
+                            <constraint firstItem="YTR-8W-jrb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I4k-jU-Hmu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="li0-at-MIS" secondAttribute="bottom" id="KGt-Bu-lbv"/>
+                            <constraint firstItem="fUf-hQ-8xW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S8R-Hf-GA5"/>
+                            <constraint firstItem="li0-at-MIS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SAD-pB-JHn"/>
+                            <constraint firstItem="js8-VI-KOe" firstAttribute="top" secondItem="YTR-8W-jrb" secondAttribute="bottom" constant="170" id="cCE-JI-xvT"/>
+                            <constraint firstItem="Uaz-Y6-8wC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="e3r-u5-qLx"/>
+                            <constraint firstItem="fUf-hQ-8xW" firstAttribute="centerX" secondItem="qMk-LX-0la" secondAttribute="centerX" id="ft8-JO-avy"/>
+                            <constraint firstItem="YTR-8W-jrb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="kBq-En-PDE"/>
+                            <constraint firstItem="Uaz-Y6-8wC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pRF-Xi-Eef"/>
+                            <constraint firstItem="li0-at-MIS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="rHq-E1-SG7"/>
+                            <constraint firstItem="qMk-LX-0la" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zHI-NL-Pcl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="li0-at-MIS" secondAttribute="trailing" constant="-20" id="zTn-jr-APC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="howManyTapsTxt" destination="qMk-LX-0la" id="3ay-O5-HTg"/>
+                        <outlet property="logoImg" destination="YTR-8W-jrb" id="GgD-EJ-xiL"/>
+                        <outlet property="playbtn" destination="fUf-hQ-8xW" id="GDn-Ih-rpS"/>
+                        <outlet property="tapButton" destination="Uaz-Y6-8wC" id="cKa-m7-0Zf"/>
+                        <outlet property="tapLabel" destination="js8-VI-KOe" id="seG-ts-pW5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="409" y="338"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="830" width="1200" height="1200"/>
+        <image name="BuTaps" width="542" height="76"/>
+        <image name="blueButton" width="302" height="301"/>
+    </resources>
 </document>
